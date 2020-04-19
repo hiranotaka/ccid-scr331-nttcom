@@ -228,6 +228,7 @@ typedef struct
 #define HID_OMNIKEY_6121 0x076B6632 /* OMNIKEY 6121 */
 #define CHERRY_XX44	0x046A00A7 /* Cherry Smart Terminal xx44 */
 #define FUJITSU_D323 0x0BF81024 /* Fujitsu Smartcard Reader D323 */
+#define SCR331NTTCOM	0x09300900
 
 #define VENDOR_GEMALTO 0x08E6
 #define GET_VENDOR(readerID) ((readerID >> 16) & 0xFFFF)
