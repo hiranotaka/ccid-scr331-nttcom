@@ -2323,6 +2323,9 @@ RESPONSECODE SetParameters(unsigned int reader_index, char protocol,
 
 	DEBUG_COMM2("length: %d bytes", length);
 
+	if (ccid_descriptor->readerID == SCR331NTTCOM)
+		return IFD_SUCCESS;
+
 	bSeq = (*ccid_descriptor->pbSeq)++;
 	cmd[0] = 0x61; /* SetParameters */
 	i2dw(length, cmd+1);	/* APDU length */

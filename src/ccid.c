@@ -102,6 +102,10 @@ int ccid_open_hack_pre(unsigned int reader_index)
 			/* The SCM SCL011 reader needs 350 ms to answer */
 			ccid_descriptor->readTimeout = DEFAULT_COM_READ_TIMEOUT * 4;
 			break;
+
+		case SCR331NTTCOM:
+			ccid_descriptor->bInterfaceProtocol = 0;
+			break;
 	}
 
 	/* CCID */
